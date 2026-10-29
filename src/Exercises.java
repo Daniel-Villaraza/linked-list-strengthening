@@ -205,11 +205,22 @@ public class Exercises {
             return false;
         }
 
-        
+        // reset references
+        currentSmall = smallList;
+        currentBig = bigList;
 
+        while (currentSmall != null) {
 
+            // check if each bigList node has a data value double than that of each corresponding smallList node data value
+            if (currentBig.data != currentSmall.data * 2) {
+                return false;
+            } else {
+                currentSmall = currentSmall.next;
+                currentBig = currentBig.next;
+            }
+        }
 
-        return false;
+        return true;
     }
 
     /**
