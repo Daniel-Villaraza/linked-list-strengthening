@@ -134,6 +134,11 @@ public class Exercises {
         }
 
         int minValue = min(head);
+
+        if (head.data == minValue) {
+            return head.next;
+        }
+
         ListNode current = head;
         boolean hasFoundFirstMinValue = false;
 
