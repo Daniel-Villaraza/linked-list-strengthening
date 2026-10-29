@@ -250,7 +250,7 @@ public class Exercises {
         // reset reference
         current = head;
         
-        if (head.next == null || k == 0 || k == nodeCount) {
+        if (head == null || head.next == null || k == 0 || k == nodeCount) {
             return head;
         }
         
