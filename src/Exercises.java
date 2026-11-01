@@ -130,12 +130,12 @@ public class Exercises {
         }
 
         int minValue = min(head);
+        ListNode current = head;
 
-        if (head.data == minValue) {
-            return head.next;
+        if (current.data == minValue) {
+            return current.next;
         }
 
-        ListNode current = head;
         boolean hasFoundFirstMinValue = false;
 
         while (!hasFoundFirstMinValue) {
