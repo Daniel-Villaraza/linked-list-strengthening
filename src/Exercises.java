@@ -67,19 +67,14 @@ public class Exercises {
         }
 
         ListNode current = head;
-
-        while (current != null) {
-            if (current.next.next != null) {
-                current = current.next;
-            } else {
-                current.next = null;
-                current = current.next;
-            }
+        
+        while (current.next.next != null) {
+            current = current.next;
         }
 
-        current = head;
+        current.next = null;
 
-        return current;
+        return head;
     }
 
     /**
