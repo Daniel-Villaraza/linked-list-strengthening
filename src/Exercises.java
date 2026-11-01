@@ -67,7 +67,7 @@ public class Exercises {
         }
 
         ListNode current = head;
-        
+
         while (current.next.next != null) {
             current = current.next;
         }
@@ -94,13 +94,14 @@ public class Exercises {
         }
 
         int minValue = Integer.MAX_VALUE;
+        ListNode current = head;
 
-        while (head != null) {
-            if (minValue > head.data) {
-                minValue = head.data;
-            } 
+        while (current != null) {
+            if (minValue > current.data) {
+                minValue = current.data;
+            }
 
-            head = head.next;
+            current = current.next;
         }
 
         return minValue;
